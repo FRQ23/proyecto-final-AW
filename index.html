@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header id="videoimage">
+    <header id="home">
         <div class="container">
             <div class="barra">
                 <div class="barra__logo">
-                    <a class="logo" href="index.html">
+                    <a class="logo" href="#home">
                         <img src="./img/bonsai-logo.png" alt="BurgerBliss" class="logo__img">
                     </a>
                 </div>
@@ -26,10 +26,10 @@
                         <span></span>
                     </label>
                     <div class="navegacion__links" id="nav-links">
-                        <a href="index.html" class="navegacion__enlace">Home</a>
-                        <a href="nosotros.html" class="navegacion__enlace">Services</a>
-                        <a href="nosotros.html" class="navegacion__enlace">Contact</a>
-                        <a href="nosotros.html" class="navegacion__enlace navegacion__enlace--boton">Order Now</a>
+                        <a href="#home" class="navegacion__enlace">Home</a>
+                        <a href="#services" class="navegacion__enlace">Show Case</a>
+                        <a href="#contact" class="navegacion__enlace">Contact</a>
+                        <a href="#quote" class="navegacion__enlace navegacion__enlace--boton">Order Now</a>
                     </div>
                 </nav>
             </div>
@@ -42,7 +42,7 @@
                     <p class="hero-feature__descripcion">
                         Discover the magic of bonsai: tiny trees full of life and harmony. Each bonsai is a natural work of art that brings tranquility and beauty to any space.
                     </p>                    
-                    <a href="#" class="hero-feature__boton">Explore</a>
+                    <a href="#services" class="hero-feature__boton">Explore</a>
                 </div>
                 <div class="hero-feature__media">
                     <img src="./img/arbol-bonsai.jpg" alt="Bonsai tree" class="hero-feature__imagen">
@@ -50,7 +50,7 @@
             </div>
         </div>
     </header>
-    <section class="bonsai-list">
+    <section id="services" class="bonsai-list">
         <div class="container bonsai-list__contenedor">
             <h2 class="bonsai-list__titulo">Bonsai highlights</h2>
             <div class="bonsai-card">
@@ -59,7 +59,7 @@
                     <p class="bonsai-card__descripcion">
                         Hardy and sculptural, the Juniper bonsai thrives both indoors and outdoors, offering classic bonsai silhouettes and rich evergreen foliage.
                     </p>
-                    <a href="#" class="bonsai-card__boton">Explore style</a>
+                    <a href="#quote" class="bonsai-card__boton">Explore style</a>
                 </div>
                 <div class="bonsai-card__media">
                     <img src="./img/juniper-bonsai.jpg" alt="Juniper bonsai" class="bonsai-card__imagen">
@@ -71,7 +71,7 @@
                     <p class="bonsai-card__descripcion">
                         A favorite for beginners, the Ficus bonsai features glossy leaves and aerial roots that create a tropical, serene presence in any interior.
                     </p>
-                    <a href="#" class="bonsai-card__boton">Discover care</a>
+                    <a href="#quote" class="bonsai-card__boton">Discover care</a>
                 </div>
                 <div class="bonsai-card__media">
                     <img src="./img/ficus-bonsai.jpg" alt="Ficus bonsai" class="bonsai-card__imagen">
@@ -83,10 +83,11 @@
                     <p class="bonsai-card__descripcion">
                         Celebrated for vibrant seasonal color, the Japanese maple bonsai delivers delicate foliage and graceful structure perfect for display.
                     </p>
-                    <a href="#" class="bonsai-card__boton">See varieties</a>
+                    <a href="#quote" class="bonsai-card__boton">See varieties</a>
                 </div>
                 <div class="bonsai-card__media">
-                    <img src="./img/japanese-maple.jpg" alt="Japanese maple bonsai" class="bonsai-card__imagen">
+                    <!--<img src="./img/japanese-maple.jpg" alt="Japanese maple bonsai" class="bonsai-card__imagen">-->
+                    <video src="./video/japanese-maple.mp4" autoplay muted loop controls class="bonsai-card__video"></video>
                 </div>
             </div>
         </div>
@@ -172,7 +173,79 @@
             </div>
         </div>
     </section>
-    <footer class="bonsai-footer">
+    <section id="quote" class="quote-section">
+        <div class="container quote-section__contenedor">
+            <div class="quote-section__header">
+                <span class="quote-section__etiqueta">Get a Quote</span>
+                <h2 class="quote-section__titulo">Request Your Custom Bonsai Quote</h2>
+                <p class="quote-section__descripcion">
+                    Fill out the form below and our bonsai specialists will provide you with a personalized quote within 24 hours.
+                </p>
+            </div>
+            <form class="quote-form" id="quote-form">
+                <div class="quote-form__row">
+                    <div class="quote-form__group">
+                        <label for="fullName" class="quote-form__label">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" class="quote-form__input" required>
+                    </div>
+                    <div class="quote-form__group">
+                        <label for="email" class="quote-form__label">Email Address *</label>
+                        <input type="email" id="email" name="email" class="quote-form__input" required>
+                    </div>
+                </div>
+                <div class="quote-form__row">
+                    <div class="quote-form__group">
+                        <label for="phone" class="quote-form__label">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="quote-form__input">
+                    </div>
+                    <div class="quote-form__group">
+                        <label for="bonsaiType" class="quote-form__label">Bonsai Type *</label>
+                        <select id="bonsaiType" name="bonsaiType" class="quote-form__input" required>
+                            <option value="">Select a type</option>
+                            <option value="juniper">Juniper Bonsai</option>
+                            <option value="ficus">Ficus Bonsai</option>
+                            <option value="japanese-maple">Japanese Maple Bonsai</option>
+                            <option value="pine">Pine Bonsai</option>
+                            <option value="elm">Chinese Elm Bonsai</option>
+                            <option value="custom">Custom Design</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="quote-form__row">
+                    <div class="quote-form__group">
+                        <label for="size" class="quote-form__label">Preferred Size *</label>
+                        <select id="size" name="size" class="quote-form__input" required>
+                            <option value="">Select size</option>
+                            <option value="small">Small (6-10 inches)</option>
+                            <option value="medium">Medium (10-16 inches)</option>
+                            <option value="large">Large (16-24 inches)</option>
+                            <option value="extra-large">Extra Large (24+ inches)</option>
+                        </select>
+                    </div>
+                    <div class="quote-form__group">
+                        <label for="budget" class="quote-form__label">Budget Range</label>
+                        <select id="budget" name="budget" class="quote-form__input">
+                            <option value="">Select budget</option>
+                            <option value="under-100">Under $100</option>
+                            <option value="100-250">$100 - $250</option>
+                            <option value="250-500">$250 - $500</option>
+                            <option value="500-1000">$500 - $1,000</option>
+                            <option value="over-1000">Over $1,000</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="quote-form__group quote-form__group--full">
+                    <label for="message" class="quote-form__label">Additional Details</label>
+                    <textarea id="message" name="message" class="quote-form__textarea" rows="5" placeholder="Tell us about your specific requirements, preferences, or any questions you have..."></textarea>
+                </div>
+                <div class="quote-form__submit-wrapper">
+                    <button type="submit" class="quote-form__button">Get Your Quote</button>
+                    <p class="quote-form__note">* Required fields</p>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer id="contact" class="bonsai-footer">
         <div class="container bonsai-footer__contenedor">
             <div class="bonsai-footer__brand">
                 <img src="./img/bonsai-logo.png" alt="Bons-AI logo" class="bonsai-footer__logo">
@@ -217,5 +290,38 @@
         </div>
     </footer>
 
+    <script>
+        // Cerrar el menú hamburguesa cuando se hace clic en un enlace
+        document.querySelectorAll('.navegacion__enlace').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('nav-toggle').checked = false;
+            });
+        });
+
+        // Manejar el envío del formulario de cotización
+        document.getElementById('quote-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Obtener los datos del formulario
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                bonsaiType: document.getElementById('bonsaiType').value,
+                size: document.getElementById('size').value,
+                budget: document.getElementById('budget').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Simular envío (aquí puedes agregar tu lógica de backend)
+            console.log('Quote Request:', formData);
+            
+            // Mostrar mensaje de éxito
+            alert('Thank you for your quote request! We will contact you within 24 hours with a personalized quote.');
+            
+            // Limpiar el formulario
+            this.reset();
+        });
+    </script>
 </body>
 </html>
