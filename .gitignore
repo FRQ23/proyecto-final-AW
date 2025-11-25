@@ -1,3 +1,3 @@
-# Ignore project-level media assets
-video/japanese-maple.mp4
-video/*.mp4
+# Ignore any media assets inside video/ but keep the folder itself
+video/*
+!video/.gitkeep
