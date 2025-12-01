@@ -152,17 +152,33 @@ Contraseña: Usuario@123
 
 ## Capturas de Pantalla
 
-### Landing Page
+### 1. Landing Page
 ![Landing Page](docs/screenshots/landing.png)
+*Página principal con hero de video, galería de bonsáis destacados, testimonios de clientes y footer informativo*
 
-### Panel de Administración
+---
+
+### 2. Panel de Administración (CRUD)
 ![Panel Admin](docs/screenshots/admin-panel.png)
+*Dashboard administrativo con tablas de usuarios y cotizaciones. Muestra operaciones CRUD completas: crear, leer, actualizar y eliminar registros*
 
-### Formulario de Registro con Validación
-![Registro](docs/screenshots/register.png)
+---
 
-### Mis Cotizaciones
-![Cotizaciones](docs/screenshots/cotizaciones.png)
+### 3. Sistema de Validación de Formularios (JavaScript)
+
+#### Validación con Errores
+![Registro Incorrecto](docs/screenshots/register-incorrect.png)
+*Formulario mostrando validación en tiempo real con errores: campos resaltados en rojo, mensajes de error específicos, y botón de envío deshabilitado*
+
+#### Validación Correcta
+![Registro Correcto](docs/screenshots/register-correct.png)
+*Formulario con validación exitosa: campos resaltados en verde, sin mensajes de error, y botón de envío habilitado. Demuestra validación de contraseñas seguras, email, y términos*
+
+---
+
+### 4. Mis Cotizaciones
+![Mis Cotizaciones](docs/screenshots/cotizaciones.png)
+*Vista de usuario mostrando sus cotizaciones guardadas en la base de datos, con detalles del bonsái solicitado y respuestas del administrador*
 
 ## Funcionalidades CRUD
 
